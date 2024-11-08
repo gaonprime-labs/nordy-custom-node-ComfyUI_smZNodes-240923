@@ -34,9 +34,10 @@ app.registerExtension({
             exifPath = relativePath.substring(0, relativePath.lastIndexOf('/')) + '/exif.js';
         }
         const _exifPath = exifPath? exifPath.toLowerCase() : ""
-        if (!exifPath || !_exifPath.includes('ComfyUI') || !_exifPath.includes('smz') || !_exifPath.includes('exif.js'))
-            exifPath = '/extensions/ComfyUI_smZNodes/web/exif.js'
-        exifPath = `${window.COMFY_API_URL}/extensions/nordy-custom-node-ComfyUI_smZNodes-240923/web/exif.js`
+        // if (!exifPath || !_exifPath.includes('ComfyUI') || !_exifPath.includes('smz') || !_exifPath.includes('exif.js'))
+        //     exifPath = '/extensions/ComfyUI_smZNodes/web/exif.js'
+        //!nordy - extension 경로 수정
+        exifPath = `${window.COMFY_API_URL}/extensions/nordy-custom-node-ComfyUI_smZNodes-240923/exif.js`
         externalScript.src = exifPath;
         externalScript.onload = function(e) {
             _EXIF = EXIF
